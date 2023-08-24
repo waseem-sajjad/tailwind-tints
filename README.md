@@ -2,6 +2,8 @@
 
 This is a [Tailwind CSS](#https://tailwindcss.com) plugin for automatically generating shades and tints for your custom colors with [Tailwind CSS IntelliSense](#https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss) from **50 to 950**.
 
+![alt screen short](https://github.com/waseem-sajjad/tailwind-tints/blob/main/Screenshot.png?raw=true)
+
 ## Installation
 
 Using npm:

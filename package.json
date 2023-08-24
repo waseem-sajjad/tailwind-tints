@@ -1,0 +1,41 @@
+{
+  "name": "tailwind-tints",
+  "version": "0.1.0",
+  "description": "Tailwind css colors shades and tints plugin.",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "prepare": "pnpm build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/waseem-sajjad/tailwind-tints.git"
+  },
+  "keywords": [
+    "tailwind",
+    "colors",
+    "shades",
+    "colors",
+    "tints",
+    "plugin",
+    "tailwind tints and shades plugin"
+  ],
+  "author": "Waseem Sajjad",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/waseem-sajjad/tailwind-tints/issues"
+  },
+  "homepage": "https://github.com/waseem-sajjad/tailwind-tints#readme",
+  "devDependencies": {
+    "@types/color-convert": "^2.0.0",
+    "tailwindcss": "^3.3.3",
+    "typescript": "^5.1.6"
+  },
+  "files": [
+    "lib/**/*"
+  ],
+  "dependencies": {
+    "color-convert": "^2.0.1"
+  }
+}

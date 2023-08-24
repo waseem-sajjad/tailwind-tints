@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "esnext",
+    "lib": ["esnext"],
+    "esModuleInterop": true,
+    "declaration": true,
+    "moduleResolution": "Node",
+    "isolatedModules": true,
+    "incremental": false,
+    "outDir": "./lib",
+    "removeComments": true,
+    "strict": true
+  },
+
+  "include": ["src"],
+  "exclude": ["node_modules"]
+}

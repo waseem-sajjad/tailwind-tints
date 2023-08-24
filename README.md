@@ -50,7 +50,7 @@ const config: Config = {
 export default config;
 ```
 
-2. Open your compoent or page and write class.
+2. Open your component or page and write class.
 
 ```tsx
 const Button = () => {

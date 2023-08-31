@@ -1,29 +1,41 @@
 import plugin from "tailwindcss/plugin";
 
-import colorize, { isValidHexColorCode } from "./utils";
-import clesses from "./utils/clesses";
+import palette, { isValidHexColorCode } from "./utils/palette";
 
 export interface Colors {
   [key: string]: string;
 }
 
-const tailwindTints = (colors: Colors) => {
-  return plugin(({ matchUtilities }) => {
-    if (colors) {
-      for (const color of Object.keys(colors)) {
-        if (!isValidHexColorCode(colors[color])) {
-          throw new Error(`Color ${color} not valid`);
-        }
+const themeConfig = (colors: Colors) => {
+  const config: {
+    [key: string]: {};
+  } = {};
 
-        const palette = colorize(color, colors[color]);
+  if (!colors) return {};
 
-        if (palette) {
-          matchUtilities(clesses, {
-            values: palette,
-          });
-        }
-      }
+  for (const color of Object.keys(colors)) {
+    if (!isValidHexColorCode(colors[color])) {
+      throw new Error(`Color ${color} not valid`);
     }
+
+    const tints = palette(colors[color]);
+
+    if (tints) {
+      config[color] = tints;
+    }
+  }
+
+  return config;
+};
+
+const tailwindTints = (colors: Colors) => {
+  const config = themeConfig(colors);
+  return plugin(() => {}, {
+    theme: {
+      extend: {
+        colors: config,
+      },
+    },
   });
 };
 

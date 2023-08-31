@@ -55,9 +55,12 @@ export default config;
 2. Open your component or page and write class.
 
 ```tsx
+
+// bg-primary-500 is your base color.
+
 const Button = () => {
   return (
-    <button className="bg-primary hover:bg-primary-600 active:bg-primary-800">
+    <button className="bg-primary-500 hover:bg-primary-600 active:bg-primary-800">
       Button
     </button>
   );

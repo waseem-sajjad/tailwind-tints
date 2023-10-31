@@ -95,6 +95,8 @@ const palette = (baseColor: string): { [key: string]: string } | undefined => {
     colors[color] = response.colors[color];
   }
 
+  colors.DEFAULT = baseColor;
+
   return colors;
 };
 

@@ -1,6 +1,6 @@
 {
   "name": "tailwind-tints",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Tailwind css colors shades and tints plugin.",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",

@@ -9,19 +9,25 @@ This is a [Tailwind CSS](#https://tailwindcss.com) plugin for automatically gene
 Using npm:
 
 ```bash
-    npm install -D tailwind-tints
+npm install -D tailwind-tints
 ```
 
 Using yarn:
 
 ```bash
-    yarn add -D tailwind-tints
+yarn add -D tailwind-tints
 ```
 
 Using pnpm:
 
 ```bash
-    pnpm add -D tailwind-tints
+pnpm add -D tailwind-tints
+```
+
+Using bun:
+
+```bash
+bun add -D tailwind-tints
 ```
 
 ## Usage
@@ -55,12 +61,9 @@ export default config;
 2. Open your component or page and write class.
 
 ```tsx
-
-// bg-primary-500 is your base color.
-
 const Button = () => {
   return (
-    <button className="bg-primary-500 hover:bg-primary-600 active:bg-primary-800">
+    <button className="bg-primary hover:bg-primary-600 active:bg-primary-800">
       Button
     </button>
   );

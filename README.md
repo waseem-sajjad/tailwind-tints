@@ -30,7 +30,29 @@ Using bun:
 bun add -D tailwind-tints
 ```
 
-## Usage
+## Usage Tailwindcss@v4.\*
+
+1. Create a `tints.plugin.ts` file in your project.
+
+```typescript
+import tailwindTints from "tailwind-tints";
+
+const tints = tailwindTints({
+  primary: "#2a9d8f",
+  secondary: "#e9c46a",
+});
+
+export default tints;
+```
+
+2. Open your `styles.css` file and import the plugin.
+
+```css
+@import "tailwindcss";
+@plugin "../tints.plugin.ts";
+```
+
+## Usage Tailwindcss@v3.\*
 
 1. Register the plugin on your `tailwind.config.ts` file.
 
@@ -40,7 +62,7 @@ import type { Config } from "tailwindcss";
 
 const tints = tailwindTints({
   primary: "#2a9d8f",
-  secondary: "#e9c46a"
+  secondary: "#e9c46a",
 });
 
 const config: Config = {
